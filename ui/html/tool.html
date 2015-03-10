@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CSS3动画生成工具</title>
+<meta name="author" content="haixialiu" />
+<meta name="copyright" content="Copyright (c) 1998-2013 Tencent." />
+<meta name="description" content="CSS3动画生成工具" />
+<link id="homeStyle" rel="stylesheet" href="css/home.css"/>
+</head>
+<body>
+<div id="wrapper">
+	<header class="header">
+		<h1>CSS3动画生成工具</h1>
+	</header>
+	<div class="container">
+		<aside class="left">
+			<section class="sec-lft">
+				<h2>显示方式</h2>
+				<ul class="list list-v1">
+				<li>
+					<input type="radio" class="input-rdo" name="radio" checked="checked">
+					<label class="tit-label">2D</label>
+					<input type="radio" class="input-rdo" name="radio">	
+					<label class="tit-label">3D</label>
+				</li>
+				</ul>
+			</section>
+
+			<section class="sec-lft">
+				<h2>动画参数</h2>
+				<ul class="list">
+				<li>
+					<label>动画时间：</label>
+					<input type="text" class="input-txt"><span class="unit">s</span>				
+				</li>
+				<li>
+					<label>延迟时间：</label>
+					<input type="text" class="input-txt"><span class="unit">s</span>				
+				</li>
+				<li>
+					<label>动画次数：</label>
+					<input type="text" class="input-txt"><span class="unit">1次/N次/infinite</span>				
+				</li>
+				<li>
+					<label>动画曲线：</label>
+					<div class="detail">
+						<p class="type">
+							<span>linear</span>
+							<span class="select">ease</span>
+							<span>ease-in</span>
+							<span>ease-out</span>
+							<span>ease-in-out</span>
+						</p>
+						<label class="tit-label2">贝塞尔曲线：</label>
+						<input type="text" class="input-txt2">	
+						<p>更多曲线效果：<a href="http://easings.net/zh-cn">http://easings.net/zh-cn</a></p>
+					</div>				
+				</li>
+				<li>
+					<label><span class="btn"><span></span></span>高级属性：</label>
+					<ul class="sublist">
+					<li>
+						<label>变形原点：</label>
+						<input type="text" class="input-txt"><span class="unit">%</span>	
+						<input type="text" class="input-txt"><span class="unit">%</span>	
+					</li>
+					<li>
+						<label>视图：</label>
+						<input type="text" class="input-txt"><span class="unit">n</span>	
+					</li>								
+					</ul>			
+				</li>									
+				</ul>
+			</section>
+			
+			<section class="sec-lft">
+				<h2>动画效果</h2>
+				<ul class="list">
+				<li>
+					<label><span class="btn"><span></span></span>缩放：</label>
+					<input type="text" class="input-txt"><span class="unit">(n,n,n)</span>
+					<ul class="sublist">
+					<li>
+						<label>X轴：</label>
+						<input type="text" class="input-txt"><span class="unit">n</span>	
+					</li>
+					<li>
+						<label>Y轴：</label>
+						<input type="text" class="input-txt"><span class="unit">n</span>	
+					</li>
+					<li>
+						<label>Z轴：</label>
+						<input type="text" class="input-txt"><span class="unit">n</span>	
+					</li>								
+					</ul>				
+				</li>
+				<li>
+					<label><span class="btn"><span></span></span>旋转：</label>
+					<input type="text" class="input-txt"><span class="unit">(x,y,z,angle)</span>	
+					<ul class="sublist">
+					<li>
+						<label>X轴：</label>
+						<input type="text" class="input-txt"><span class="unit">deg</span>	
+					</li>
+					<li>
+						<label>Y轴：</label>
+						<input type="text" class="input-txt"><span class="unit">deg</span>	
+					</li>
+					<li>
+						<label>Z轴：</label>
+						<input type="text" class="input-txt"><span class="unit">deg</span>	
+					</li>								
+					</ul>							
+				</li>
+				<li>
+					<label><span class="btn"><span></span></span>位移：</label>
+					<input type="text" class="input-txt"><span class="unit">(x,y,z)</span>	
+					<ul class="sublist">
+					<li>
+						<label>X轴：</label>
+						<input type="text" class="input-txt"><span class="unit">px</span>	
+					</li>
+					<li>
+						<label>Y轴：</label>
+						<input type="text" class="input-txt"><span class="unit">px</span>	
+					</li>
+					<li>
+						<label>Z轴：</label>
+						<input type="text" class="input-txt"><span class="unit">px</span>	
+					</li>								
+					</ul>				
+				</li>
+				<li>
+					<label>淡入：</label>
+					<input type="text" class="input-txt"><span class="unit">0-1</span>				
+				</li>	
+				<li>
+					<label>模糊：</label>
+					<input type="text" class="input-txt"><span class="unit">px</span>				
+				</li>					
+				</ul>	
+			</section>
+		</aside>
+
+		<div class="middle">
+			<h2>您可以拖动自己的图片到画布</h2>
+			<div class="animation-area">
+				<div class="animation"></div>
+				<p class="size">屏幕大小：<span>320*568</span></p>
+			</div>
+			<div class="page-area">
+				<a href="javascript:;" class="cur">1</a>
+				<a href="javascript:;">2</a>
+				<a href="javascript:;">3</a>
+				<a href="javascript:;">4</a>
+				<a href="javascript:;">5</a>
+				<a href="javascript:;">6</a>
+				<a href="javascript:;">7</a>
+			</div>
+			<div class="screen-change">
+				<span class="btn">更改屏幕大小</span>
+				<ul>
+				<li size="320*480">iphone4/4s</li>
+				<li class="select" size="320*568">iphone5c/5s</li>
+				<li size="375*667">iphone6</li>
+				<li size="414*736">iphone6+</li>
+				</ul>
+				<div class="tip">
+					<span class="safari" size="320*568">safari模式</span>
+					<span class="wx" size="320*480">微信模式</span>
+				</div>
+			</div>
+		</div>
+
+		<aside class="right">
+			<div class="btn-area">
+				<button class="btn">新建动画</button>
+				<button class="btn">删除动画</button>
+				<button class="btn">动画预览</button>
+				<button class="btn">重置</button>
+			</div>
+			<div class="keyframe-area">
+				<h2>当前页添加帧动画</h2>
+				<button class="btn btn-default">0%</button>
+				<span class="frame">
+					<input type="text" class="input-txt">
+					<button class="btn" style="display:none">25%</button>
+				</span>
+				<span class="frame">
+					<input type="text" class="input-txt">
+					<button class="btn">50%</button>
+				</span>	
+				<span class="frame">
+					<input type="text" class="input-txt">
+					<button class="btn" style="display:none">75%</button>
+				</span>								
+				<button class="btn btn-default">100%</button>
+				<button class="btn btn-add">+新增关键帧</button>
+			</div>
+			<div class="p-desc">
+				<h2>工具使用说明：</h2>
+				<p>动画预览：通过左侧设置的动画点击动画预览按钮可以直接看效果。</p>
+				<p>重置：将当前元素的动画恢复到默认设置。</p>
+				<p>动画删除：删除单个元素及动画。</p>
+				<p>删除所有：删除画布中所有元素及动画。</p>
+			</div>
+		</aside>
+	</div>
+
+
+	<div class="property-area">
+		<div class="u-img">
+			<span>选中的对象</span>
+			<img src="images/img.jpg" class="img" width="70" height="90">
+		</div>
+		<dl>
+		<dt>属性</dt>
+		<dd>
+			<label>动画名称: </label>
+			<input type="text" class="input-txt">
+			<label>className: </label>
+			<input type="text" class="input-txt">	
+			<label>id: </label>
+			<input type="text" class="input-txt">												
+		</dd>
+		</dl>
+		<a href="javascript:;" class="btn"><span></span></a>
+	</div>
+
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/show.js"></script>
+<script type="text/javascript">
+var height = window.innerHeight, container = $('.container');
+	container.css("min-height", height - 60);	
+
+	var areaAnimation = $('.animation-area'),
+		canvas = areaAnimation.find('.animation'), 
+		size = areaAnimation.find('.size'), 
+		list = $('.screen-change').find('ul'),
+		aLi = list.find('li'),
+		oBtn = $('.screen-change').find('.btn'),
+		aTip = $('.screen-change').find('.tip');
+
+	$('.screen-change').delegate('li','click',function(e){
+		var _this = $(e.currentTarget), _size = _this.attr('size'),
+			index = $(this).index()+1;
+		_this.addClass('select').siblings().removeClass('select');	
+		var _width = _size.split('*')[0],_height = _size.split('*')[1];
+		canvas.css({'width':_width, 'height':_height});
+		areaAnimation.width(_width);
+		size.find('span').text(_size);
+		oBtn.removeClass('btn-down');
+
+		aTip.show().css('top',30+index*40+'px');
+		aTip.find('.safari').attr('size', _size);
+		aTip.find('.wx').attr('size', _size.split('*')[0] + '*' + (_size.split('*')[1]-88));
+
+	});
+
+	aTip.find('span').click(function(){
+		var _size = $(this).attr('size');
+		var _width = _size.split('*')[0],_height = _size.split('*')[1];
+		canvas.css({'width':_width, 'height':_height});
+		areaAnimation.width(_width);
+		size.find('span').text(_size);	
+	});
+
+	new Tab({
+		el : '.btn',
+		wrap : '.sec-lft',
+		elTarget : 'ul.sublist',
+		className : 'btn-down',
+		parents : 'li'
+	});
+	new Tab({
+		el : '.btn',
+		wrap : '.screen-change',
+		elTarget : 'ul',
+		className : 'btn-down',
+		parents : '.screen-change'
+	});
+</script>
+</body>
+</html>
